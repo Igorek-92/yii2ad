@@ -97,12 +97,6 @@ class SiteController extends Controller
         return $this->render('index', compact('model'));
     }
 
-    public function actionUserc()
-    {
-        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-        $products = City::find()->with()->all();
-        return $products;
-    }
 
     /**
      * Logs in a user.
